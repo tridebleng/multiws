@@ -339,8 +339,8 @@ echo "   - Backup & Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> About " | tee -a log-install.txt
-echo "   - Script Presented By      : YOKKO EDDY STORE" | tee -a log-install.txt" | tee -a log-install.txt
-echo "   - Contact (Only Text)      : wa.me/6281949400586" | tee -a log-install.txt" | tee -a log-install.txt
+echo "   - Script Presented By      : ARTA MAULANA STORE" | tee -a log-install.txt" | tee -a log-install.txt
+echo "   - Contact (Only Text)      : wa.me/6283162336146" | tee -a log-install.txt" | tee -a log-install.txt
 echo "------------------------------------------------------------"
 echo ""
 echo "=============-[ ARTA MAULANA PREMI ]-==============="
@@ -354,7 +354,7 @@ rm /root/update.sh
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e "
 "
-echo -ne "[ ${yell}WARNING${NC} ] Do you want to reboot now ? (y/n)? "
+echo -e "[ ${yell}WARNING${NC} ] Do you want to reboot now ? (y/n)? "
 read answer
 if [ "$answer" == "${answer#[Yy]}" ] ;then
 exit 0
