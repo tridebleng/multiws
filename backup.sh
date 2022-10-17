@@ -98,7 +98,7 @@ cp /etc/shadow /root/backup/ &> /dev/null
 cp /etc/gshadow /root/backup/ &> /dev/null
 cp /etc/ppp/chap-secrets /root/backup/chap-secrets &> /dev/null
 cp /etc/ipsec.d/passwd /root/backup/passwd1 &> /dev/null
-cp -r /var/lib/yokkovpn-pro/ /root/backup/yokkovpn-pro &> /dev/null
+cp -r /var/lib/artanodrop-pro/ /root/backup/artanodrop-pro &> /dev/null
 cp -r /etc/xray /root/backup/xray &> /dev/null
 cp -r /home/vps/public_html /root/backup/public_html &> /dev/null
 cp -r /etc/cron.d /root/backup/cron.d &> /dev/null
@@ -109,7 +109,7 @@ zip -rP $InputPass $NameUser.zip backup > /dev/null 2>&1
 ##############++++++++++++++++++++++++#############
 LLatest=`date`
 Get_Data () {
-git clone https://github.com/YakkoXCode74/backupuseryokko.git /root/user-backup/ &> /dev/null
+git clone https://github.com/artanodrop/backupuser.git /root/user-backup/ &> /dev/null
 }
 
 Mkdir_Data () {
@@ -129,15 +129,15 @@ mv /root/$NameUser.zip /root/user-backup/$NameUser/
 Save_And_Exit () {
     DATE=$(date +'%d %B %Y')
     cd /root/user-backup
-    git config --global user.email "YakkoRasZ74@gmail.com" &> /dev/null
-    git config --global user.name "YakkoXCode74" &> /dev/null
+    git config --global user.email "arta.nodrop@outlook.com" &> /dev/null
+    git config --global user.name "artanodrop" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m backup &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/YakkoXCode74/backupuseryokko
-    git push -f https://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@github.com/YakkoXCode74/backupuseryokko.git &> /dev/null
+    git remote add origin https://github.com/artanodrop/backupuser
+    git push -f https://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@github.com/artanodrop/backupuser.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
@@ -152,7 +152,7 @@ sleep 1
 echo -e "$COLOR1│${NC}  [INFO] Processing updating server...... "
 Save_And_Exit
 fi
-link="https://raw.githubusercontent.com/YakkoXCode74/backupuseryokko/main/$NameUser/$NameUser.zip"
+link="https://raw.githubusercontent.com/artanodrop/backupuser/main/$NameUser/$NameUser.zip"
 sleep 1
 echo -e "$COLOR1│${NC}  [INFO] Backup done "
 sleep 1
@@ -175,7 +175,7 @@ rm -rf /root/user-backup &> /dev/null
 rm -f /root/$NameUser.zip &> /dev/null
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}              • ARTA  MAULANA  PROJECT •                $COLOR1│$NC"
+echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo
 read -n 1 -s -r -p "   Press any key to back on menu"
